@@ -1,30 +1,33 @@
 import './Expenses.css'
 import ExpenseItem from './ExpenseItem';
+import Card from './Card';
 
 function Expenses(props) {
+    console.log("p ", props.expenses)
+    props = props.expenses;
     return (
-        <div className="expenses">
-    <ExpenseItem
-    title={props.expenses[0].title}
-    amount={props.expenses[0].amount}
-    date={props.expenses[0].date}
-  ></ExpenseItem>
-  <ExpenseItem
-    title={props.expenses[1].title}
-    amount={props.expenses[1].amount}
-    date={props.expenses[1].date}
-  ></ExpenseItem>
-  <ExpenseItem
-    title={props.expenses[2].title}
-    amount={props.expenses[2].amount}
-    date={props.expenses[2].date}
-  ></ExpenseItem>
-  <ExpenseItem
-    title={props.expenses[3].title}
-    amount={props.expenses[3].amount}
-    date={props.expenses[3].date}
-  ></ExpenseItem>
-  </div>
+        <Card className="expenses">
+            <ExpenseItem
+                title={props[0].title}
+                amount={props[0].amount}
+                date={props[0].date}
+            />
+            <ExpenseItem
+                title={props[1].title}
+                amount={props[1].amount}
+                date={props[1].date}
+            />
+            <ExpenseItem
+                title={props[2].title}
+                amount={props[2].amount}
+                date={props[2].date}
+            />
+            <ExpenseItem
+                title={props[3].title}
+                amount={props[3].amount}
+                date={props[3].date}
+            />
+        </Card>
     );
 }
 
